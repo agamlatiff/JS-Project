@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat Font Inter dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Ikon dari Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <div class="container mx-auto max-w-2xl px-4 py-8 md:py-16">
+      <!-- Header Application -->
+      <header class="text-center mb-8">
+        <h1
+          class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white"
+        >
+          To-Do-List
+        </h1>
+        <p class="text-gray-500 dark:text-gray-400 mt-2">
+          Atur tugas harian Anda dengan mudah.
+        </p>
+      </header>
+
+      <!--Form untuk Menambah Tugas Baru  -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 mb-6">
+        <form
+          id="task-form"
+          class="flex flex-col sm:flex-row items-center gap-3"
+        >
+          <div class="relative flex-grow w-full">
+            <i
+              class="ph ph-note-pencil absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+            ></i>
+            <input
+              type="text"
+              id="task-input"
+              placeholder="Ketik tugas baru..."
+              class="w-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border-2 border-transparent focus:border-blue-500 focus:ring-0 rounded-lg py-2.5 pl-10 pr-4 transition-colors duration-300"
+            />
+          </div>
+          <button type="submit" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 ">
+            <i class="ph ph-plus-circle text-xl"></i>
+            <span>Tambah</span>
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Container untuk Daftar Tugas -->
+     <main id="task-list-container" class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
+      
+     </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
