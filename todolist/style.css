@@ -18,7 +18,12 @@ body {
   animation : fadeIn 0.3s ease-out
 }
 
-.task-item input:checked+span {
+.task-item input[type="checkbox"]:checked + .task-text {
   text-decoration: line-through;
   color: #9ca3af;
+}
+
+.filter-btn.active {
+  background: #3b82f6;
+  color: #fff !important;
 }
