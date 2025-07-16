@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
     <link rel="stylesheet" href="./style.css" />
-    <!-- Memuat Tailwind CSS -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Memuat Font Inter dari Google Fonts -->
+    <!-- Font Inter dari Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Memuat CSS -->
+    <link rel="stylesheet" href="./style.css" />
     <!-- Ikon dari Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
@@ -48,19 +50,36 @@
               class="w-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border-2 border-transparent focus:border-blue-500 focus:ring-0 rounded-lg py-2.5 pl-10 pr-4 transition-colors duration-300"
             />
           </div>
-          <button type="submit" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 ">
+          <button
+            type="submit"
+            class="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+          >
             <i class="ph ph-plus-circle text-xl"></i>
             <span>Tambah</span>
           </button>
         </form>
       </div>
-    </div>
-    
-    <!-- Container untuk Daftar Tugas -->
-     <main id="task-list-container" class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
-      
-     </main>
 
-    <script src="./script.js"></script>
+      <!-- Container untuk Daftar Tugas -->
+      <main
+        id="task-list-container"
+        class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4"
+      >
+        <!-- Pesan jika tidak ada tugas -->
+        <div id="empty-state" class="text-center py-8">
+          <i
+            class="ph ph-clipboard-text text-5xl text-gray-400 dark:text-gray-500"
+          ></i>
+          <p class="mt-4 text-gray-500 dark:text-gray-400">
+            Belum ada tugas. Saatnya menambahkan!
+          </p>
+        </div>
+
+        <!-- Daftar tugas -->
+        <ul id="task-list" class="space-y-3"></ul>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
