@@ -69,7 +69,7 @@ const fetchMovies = async (searchTerm) => {
       displayMovies(data.Search);
     } else {
       // Display the error provided by the API (e.g., "Movie not found")
-      statusMessage.textContent = `Error: ${data.Error}`;
+      statusMessage.textContent = `${data.Error}`;
     }
   } catch (error) {
     // Error handling (Network/Other)
